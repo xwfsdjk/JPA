@@ -1,0 +1,21 @@
+JPA
+@Id
+@GeneratedValue(strategy=GenerationType.AUTO)
+@Column(length=10,nullable=true,name="name")
+@Temporal(TemporalType.DATE)
+@Enumerated(EnumType.STRING)
+@Lob 声明大文本类型数据 Longtext Longblob
+@Transient  不被持久化字段
+@Basic(fetch=FetchType.LAZY)  延迟加载
+位置参数 ？1  命名参数：name
+1-n 多的一方为关系维护方 关系维方 负责外键记录的更新
+merge 只能是游离状态的对象
+refresh 已经获取的对象a 这时有其他程序修改了这个对象 需要用refresh 获取这个对象的最新状态 再次查询 是 从缓存里拿数据 不是最新的
+只有调用对应方法才会 触发 
+@OneToMany(cascade={CascadeType.REFRESH,CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REMOVE},mappedBy="order")
+出现mappedBy 表示 是关系被维护方 属性值
+@JoinColumn(name="order_id") 设置外键的名称
+@JoinTable(name="student_teacher") 关联表
+getReference  LOAD  find get
+
+@Embeddable 用于组合键
