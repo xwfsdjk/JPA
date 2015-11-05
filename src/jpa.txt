@@ -19,3 +19,4 @@ refresh ÒÑ¾­»ñÈ¡µÄ¶ÔÏóa ÕâÊ±ÓĞÆäËû³ÌĞòĞŞ¸ÄÁËÕâ¸ö¶ÔÏó ĞèÒªÓÃrefresh »ñÈ¡Õâ¸ö¶ÔÏóµ
 getReference  LOAD  find get
 
 @Embeddable ÓÃÓÚ×éºÏ¼ü
+@EmbeddedId
